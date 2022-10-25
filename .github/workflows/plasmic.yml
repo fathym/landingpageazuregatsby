@@ -3,6 +3,7 @@ name: Sync, build and deploy Plasmic app
 
 permissions:
   contents: write
+  pages: write
 
 on:
   repository_dispatch:
