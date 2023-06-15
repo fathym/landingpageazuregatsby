@@ -1,9 +1,10 @@
-# Plasmic workflow v3
+# Plasmic workflow v4
 name: Sync, build and deploy Plasmic app
 
 permissions:
   contents: write
   pages: write
+  pull-requests: write
 
 on:
   repository_dispatch:
@@ -21,10 +22,10 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - id: node
-        name: Setting up node v16...
-        uses: actions/setup-node@v2
+        name: Setting up node v18...
+        uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
       - id: cache
         name: Recovering cache...
         uses: actions/cache@v2
